@@ -8,7 +8,7 @@ mogreet
 Please note that the author of this software has no connection with Mogreet.
 We just needed this stuff for our own projects. YMMV.  
 
-RestClient is heavily adapted from **twilio-node**:  <https://github.com/twilio/twilio-node.git> and depends on **request**:  <http://github.com/mikeal/request.git>.
+**Mogreet** is heavily adapted from **twilio-node**:  <https://github.com/twilio/twilio-node.git> and depends on **request**:  <http://github.com/mikeal/request.git>.
 
 N.B.: **request** has issues with SSL under node > 0.9.x <= ~0.10.5. Https calls to the Mogreet API fail with ECONNRESET errors.  Discussion here:  <http://stackoverflow.com/questions/11091974/ssl-error-in-nodejs>.
 
