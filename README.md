@@ -1,24 +1,20 @@
 mogreet
 =======
 
-* A Simple Node Client for the Mogreet API *
+**A Simple Node Client for the Mogreet API**
 
 <https://developer.mogreet.com/>
 
-> Please note that the author of this software has no connection 
-> with Mogreet. We just needed this stuff for our own projects. YMMV.
+Please note that the author of this software has no connection with Mogreet.
+We just needed this stuff for our own projects. YMMV. RestClient is heavily
+adapted from **twilio-node**: ( <https://github.com/twilio/twilio-node.git> ) 
+and depends on **request**:  ( <http://github.com/mikeal/request.git> )
 
-> RestClient is heavily adapted from *twilio-node*
-> <https://github.com/twilio/twilio-node.git>
+N.B.: **request** has issues with SSL under node > 0.9.x <= ~0.10.5.
+https calls to the Mogreet API fail with ECONNRESET errors.
+Discussion here: <http://stackoverflow.com/questions/11091974/ssl-error-in-nodejs>
 
-> Depends on *request*:
-> <http://github.com/mikeal/request.git>
-
-> > N.B.: *request* has issues with SSL under node > 0.9.x <= ~0.10.5.
-> > https calls to the Mogreet API fail with ECONNRESET errors.
-> > Discussion here: <http://stackoverflow.com/questions/11091974/ssl-error-in-nodejs>
-
-> > The fix (already included in this module) is to include:
+The fix (already included in this module) is to include:
 
 ```javascript
 var https = require('https');
@@ -31,7 +27,9 @@ Configuration
 -------------
 
 You can find/create your unique API credentials at:
-<https://developer.mogreet.com/dashboard/settings> (requires Mogreet dev account).
+<https://developer.mogreet.com/dashboard/settings>
+
+(requires Mogreet dev account).
 
 You can either instantiate the Client using your API credentials directly:
 
@@ -40,7 +38,7 @@ var accountCID 	  = Your Account CID,
 	authToken     = Your Auth Token,
 	smsID         = Your Campaign ID,
 	mmsID         = Your MMS Campaign ID,
-	options       = {},
+	options       = {};
 
 var client = require('mogreet')( accountCID, authToken, smsID, mmsID, options );
 ```
