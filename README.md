@@ -1,7 +1,7 @@
 mogreet
 =======
 
-**A Simple Node Client for the Mogreet API**
+**A Simple Node Client for the Mogreet API (API Version 4.01 - 9/11/2012)**
 
 <https://developer.mogreet.com/>
 
