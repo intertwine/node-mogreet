@@ -121,3 +121,10 @@ var options = {
 client.sendMms(options, function (error, data, response) {} );
 ```
 
+Testing
+-------
+
+At the moment there are no unit tests included, but there is a simple
+test script included. You can adapt the server file in test.js
+to run simple tests against your credentials.
+
