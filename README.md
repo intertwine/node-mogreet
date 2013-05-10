@@ -1,7 +1,8 @@
-node-mogreet
-============
+mogreet
+=======
 
 * A Simple Node Client for the Mogreet API *
+
 <https://developer.mogreet.com/>
 
 > Please note that the author of this software has no connection 
@@ -10,12 +11,12 @@ node-mogreet
 > RestClient is heavily adapted from *twilio-node*
 > <https://github.com/twilio/twilio-node.git>
 
-> Depends on request:
+> Depends on *request*:
 > <http://github.com/mikeal/request.git>
 
-> > N.B.: request has issues with SSL under node > 0.9.2 <= ~0.10.5.
+> > N.B.: *request* has issues with SSL under node > 0.9.x <= ~0.10.5.
 > > https calls to the Mogreet API fail with ECONNRESET errors.
-> > Discussion here: http://stackoverflow.com/questions/11091974/ssl-error-in-nodejs
+> > Discussion here: <http://stackoverflow.com/questions/11091974/ssl-error-in-nodejs>
 
 > > The fix (already included in this module) is to include:
 
@@ -23,6 +24,8 @@ node-mogreet
 var https = require('https');
 https.globalAgent.options.secureProtocol = 'SSLv3_method';
 ```
+before invoking the request client.
+
 
 Configuration
 -------------
@@ -39,10 +42,10 @@ var accountCID 	  = Your Account CID,
 	mmsID         = Your MMS Campaign ID,
 	options       = {},
 
-var client = require('node-mogreet')( accountCID, authToken, smsID, mmsID, options );
+var client = require('mogreet')( accountCID, authToken, smsID, mmsID, options );
 ```
 
-OR, nicer:
+OR, *sweeter*:
 
 You can include the API credentials in your environment:
 
@@ -56,7 +59,7 @@ MOGREET_MMS_CAMPAIGN_ID = Your MMS Campaign ID
 And instantiate the Client with:
 
 ```javascript
-var client = require('node-mogreet')();
+var client = require('mogreet')();
 ```
 
 Basic Usage
@@ -73,11 +76,11 @@ var options = {
 	url: 'transaction.send'
 	qs: {
 		to          : '2125551212',
-		message     : 'Hello World!'
+		message     : 'Hello World!',
 		campaign_id : [SMS or MMS Campaign ID]
 
 	}
-}
+};
 client.request(options, function (error, data, response) {
 	if (error) {
 		// error - contains error information, if any
@@ -93,7 +96,7 @@ Convenience Methods
 ### Ping (system.ping)
 
 ```javascript
-var options = {}
+var options = {};
 client.ping(options, function (error, data, response) {} );
 ```
 
@@ -104,7 +107,7 @@ var options = {
 	to: '2125551212',
 	message: 'Hello World!',
 	callback: '(URL for optional callback to your server)'
-}
+};
 client.sendSms(options, function (error, data, response) {} );
 ```
 
@@ -117,7 +120,7 @@ var options = {
 	content_id: '(optional - for content already on a mogreet server)',
 	content_url: '(optional - for content at any accessible URL)',
 	callback: '(URL for optional callback to your server)'
-}
+};
 client.sendMms(options, function (error, data, response) {} );
 ```
 

@@ -5,14 +5,13 @@ var http = require('http'),
 var port = parseInt(process.env.PORT, 10) || 5000,
 	sendOpts = {
 		qs: {
-			to: '4438506036',
-			message: 'Hello World MMS!!',
-			'content_url': 'http://jobjybe-dashboard.herokuapp.com/images/logo.png'
+			to: '2125551212',
+			message: 'Hello, World!',
 		}
 	},
 	server = http.createServer(function (req, res) {
 		'use strict';
-		client.sendMms(sendOpts, function(err, data, response) {
+		client.sendSms(sendOpts, function(err, data, response) {
 			res.writeHead(200);
 			if (err) {
 				res.end('Bad mojo:' + err + response);

@@ -1,16 +1,30 @@
 {
-  "name": "node-mogreet",
+  "name": "mogreet",
+  "description":"A Simple Node Client for the Mogreet API",
   "version": "0.0.1",
-  "main": "index.js",
+  "keywords": [
+    "mogreet",
+    "node",
+    "api",
+    "mms",
+    "sms",
+    "telephony"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/intertwine/node-mogreet.git"
+    "url": "git://github.com/intertwine/mogreet.git"
   },
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "main": "index.js",
   "dependencies": {
     "underscore": "~1.4.4",
     "request": "~2.21.0"
   },
-  "author": "Bryan Young, Baustin SailWorks",
-  "license": "MIT",
-  "private": true
+  "author": {
+    "name": "Bryan Young",
+    "email": "bryan@intertwinesys.com"
+  },
+  "license": "MIT"
 }
