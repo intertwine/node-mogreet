@@ -1,0 +1,16 @@
+{
+  "name": "node-mogreet",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/intertwine/node-mogreet.git"
+  },
+  "dependencies": {
+    "underscore": "~1.4.4",
+    "request": "~2.21.0"
+  },
+  "author": "Bryan Young, Baustin SailWorks",
+  "license": "MIT",
+  "private": true
+}
