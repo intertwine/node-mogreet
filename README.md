@@ -93,9 +93,11 @@ mogreet.ping(options, function (error, data, response) {} );
 ### SMS (transaction.send)
 ```javascript
 var options = {
-	to       : '2125551212',
-	message  : 'Hello World!',
-	callback : '(URL for optional callback to your server)'
+	qs: {
+		to       : '2125551212',
+		message  : 'Hello World!',
+		callback : '(URL for optional callback to your server)'
+	}
 };
 mogreet.sendSms(options, function (error, data, response) {} );
 ```
@@ -103,11 +105,13 @@ mogreet.sendSms(options, function (error, data, response) {} );
 ### MMS (transaction.send)
 ```javascript
 var options = {
-	to          : '2125551212',
-	message     : 'Hello World!',
-	content_id  : '(optional - for content already on a mogreet server)',
-	content_url : '(optional - for content at any accessible URL)',
-	callback    : '(URL for optional callback to your server)'
+	qs: {
+		to          : '2125551212',
+		message     : 'Hello World!',
+		content_id  : '(optional - for content already on a mogreet server)',
+		content_url : '(optional - for content at any accessible URL)',
+		callback    : '(URL for optional callback to your server)'
+	}
 };
 mogreet.sendMms(options, function (error, data, response) {} );
 ```
