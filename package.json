@@ -1,7 +1,7 @@
 {
   "name": "mogreet",
   "description":"A Simple Node Client for the Mogreet API",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "mogreet",
     "node",
