@@ -1,7 +1,7 @@
 {
   "name": "mogreet",
-  "description":"A Simple Node Client for the Mogreet API",
-  "version": "0.0.3",
+  "description": "A Simple Node Client for the Mogreet API",
+  "version": "0.0.4",
   "keywords": [
     "mogreet",
     "node",
@@ -20,7 +20,7 @@
   "main": "index.js",
   "dependencies": {
     "underscore": "~1.5.2",
-    "request": "~2.27.0"
+    "request": "~2.30.0"
   },
   "author": {
     "name": "Bryan Young",
