@@ -2,9 +2,6 @@ var _ = require('underscore'),
     https   = require('https'),
     request = require('request');
 
-/* fix for SSL ECONNRESET errors under  node 0.10.x */
-https.globalAgent.options.secureProtocol = 'SSLv3_method';
-
 var defaultHost = 'api.mogreet.com',
 	defaultMogreetMethod = 'system.ping',
 	_requestDefaults = {
