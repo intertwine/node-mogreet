@@ -1,5 +1,4 @@
 var _ = require('underscore'),
-    https   = require('https'),
     request = require('request');
 
 var defaultHost = 'api.mogreet.com',
